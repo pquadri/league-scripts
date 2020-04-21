@@ -40,13 +40,14 @@ class Matchup:
                 "kda": round((self.kills + self.assists) / max(self.deaths, 1), 3)
                 }
 
-
+# cassiopeia setup
 cass.set_riot_api_key('INSERT_API_KEY')
 cass.set_default_region("EUW")        
 
+# dates to be considered
 begin_data = datetime.strptime("08/01/20 00:00", "%d/%m/%y %H:%M")
-end_data= datetime.now()#datetime.strptime("25/01/20 00:00", "%d/%m/%y %H:%M")
-calls = 0
+end_data= datetime.now()
+
 players = {
            "faker": ["Hide on Bush"], 
            # short_name: exact summoner name, list for more than one
